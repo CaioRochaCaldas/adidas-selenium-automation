@@ -1,1 +1,0 @@
-# adidas-selenium-automation
