@@ -1,5 +1,5 @@
-# Amazon Clone Automation with Appium
-This project is an automation of an Amazon Shopping mobile app clone using Appium and Robot Framework. It applies the Page Object Model (POM) design pattern to ensure maintainable and scalable test automation. The project includes smoke, regression, and E2E tests covering key user flows: product search, adding items to the cart, managing the wishlist, account creation, adding delivery addresses, and completing product purchases. It demonstrates my ability to design robust frameworks and implement effective mobile testing solutions.
+# Nike Automation with Selenium
+This project automates end-to-end web testing of the Nike online store using Selenium WebDriver, Java, and JUnit. It applies the Page Object Model (POM), Page Factory, and Fluent Pages design patterns to ensure maintainable and scalable test automation. The suite includes E2E, Smoke, and Regression tests covering critical user flows such as searching for products, applying color and gender filters, selecting sizes, adding and removing items from the cart, verifying cart contents, and validating checkout behavior, demonstrating strong skills in building robust, efficient, and well-structured web test frameworks.
 
 ## 🎞️ Execution Preview
 
