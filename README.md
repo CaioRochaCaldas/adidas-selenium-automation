@@ -22,11 +22,11 @@ Here are the full videos showcasing different types of test executions:
 
 ## Tech Stack
 
-<img width="150" height="250" alt="robot" src="https://github.com/user-attachments/assets/41df9f5c-44f3-4970-814a-1296536520f1" />
+<img width="150" height="250" alt="selenium webdriver" src="https://github.com/user-attachments/assets/41df9f5c-44f3-4970-814a-1296536520f1" />
 
-<img width="150" height="100" alt="images" src="https://github.com/user-attachments/assets/aa1eb72d-0e2c-4bf4-b827-b5c6ca07b016" />
+<img width="150" height="50" alt="junit" src="https://github.com/user-attachments/assets/aa1eb72d-0e2c-4bf4-b827-b5c6ca07b016" />
 
-<img width="150" height="100" alt="images" src="https://github.com/user-attachments/assets/777301f8-bcc5-4998-b1e9-1d0fe9f768ef" />
+<img width="150" height="50" alt="java" src="https://github.com/user-attachments/assets/777301f8-bcc5-4998-b1e9-1d0fe9f768ef" />
 
 ## Test Cases
 - EndToEnd
