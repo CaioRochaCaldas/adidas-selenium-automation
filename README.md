@@ -28,7 +28,7 @@ Here are the full videos showcasing different types of test executions:
 
 <img width="150" height="250" alt="robot" src="https://github.com/user-attachments/assets/41df9f5c-44f3-4970-814a-1296536520f1" />
 
-<img width="150" height="100" alt="robot" src="https://github.com/user-attachments/assets/cefa0c69-95ca-407c-b9bb-df1bdd03984b" />
+<img width="150" height="250" alt="images" src="https://github.com/user-attachments/assets/56328068-89f7-44ed-aeb6-5f4f1e6c02a3" />
 
 
 ## Test Cases
