@@ -26,7 +26,11 @@ Here are the full videos showcasing different types of test executions:
 
 <img width="100" height="100" alt="robot" src="https://github.com/user-attachments/assets/a8cb85cd-e941-4e1a-a4f3-87e93d0d3606" />
 
-![b82aa7ac3f736dd78570dd3fa3fa9e24-icone-da-linguagem-de-programacao-java](https://github.com/user-attachments/assets/ce7cf907-14b9-467f-b66d-02933714d8b7)
+![selenium](https://github.com/user-attachments/assets/41df9f5c-44f3-4970-814a-1296536520f1)
+
+<img width="100" height="100" alt="robot" src="https://github.com/user-attachments/assets/41df9f5c-44f3-4970-814a-1296536520f1" />
+
+
 
 ## Test Cases
 - EndToEnd
