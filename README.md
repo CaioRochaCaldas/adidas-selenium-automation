@@ -54,7 +54,7 @@ Here are the full videos showcasing different types of test executions:
 
 <img width="2443" height="1212" alt="Captura de tela 2025-10-21 133756" src="https://github.com/user-attachments/assets/faa1adc6-09c0-47b7-9301-9397840a67bd" />
 
-* __Cheackout Page__
+* __Checkout Page__
   
 <img width="2443" height="1212" alt="Captura de tela 2025-10-21 134150" src="https://github.com/user-attachments/assets/76ad0cd1-566b-4f77-ae07-9cf07250a510" />
 
