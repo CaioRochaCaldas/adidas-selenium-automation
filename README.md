@@ -43,7 +43,7 @@ Here are the full videos showcasing different types of test executions:
 
 - Clear Product From Cart Using Button
 
-## App Screenshots
+## Website Screenshots
 * __Home Page__
 
 <img width="2443" height="1212" alt="Captura de tela 2025-10-21 133408" src="https://github.com/user-attachments/assets/f708831b-1827-4949-944e-a2db2eb0ad3d" />
