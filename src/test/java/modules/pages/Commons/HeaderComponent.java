@@ -3,7 +3,6 @@ package modules.pages.Commons;
 import modules.pages.BasePage.BasePage;
 import modules.pages.CartPage.CartPage;
 import modules.pages.FindStorePage.FindStorePage;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -41,13 +40,13 @@ public class HeaderComponent extends BasePage {
         wait.until(ExpectedConditions.visibilityOf(nikeLogo));
     }
 
-    public ProductGridComponent SearchProduct(String productName) throws InterruptedException {
+    public ProductResults SearchProduct(String productName) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(inputSearch));
         inputSearch.click();
         inputSearch.sendKeys(productName + Keys.ENTER);
 
-        return new ProductGridComponent(driver);
+        return new ProductResults(driver);
     }
 
     public FindStorePage FindAStore(){

@@ -28,7 +28,7 @@ public class ProductPage extends BasePage {
         firstProductVariant.click();
         wait.until(ExpectedConditions.visibilityOf(btnSize));
         btnSize.click();
-        Thread.sleep(1500);
+        Thread.sleep(2500);
         wait.until(ExpectedConditions.elementToBeClickable(btnAddtoBag));
         btnAddtoBag.click();
     }

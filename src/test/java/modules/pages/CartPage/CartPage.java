@@ -2,6 +2,7 @@ package modules.pages.CartPage;
 
 import modules.pages.BasePage.BasePage;
 import modules.pages.CheckoutPage.CheckoutPage;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,10 +20,19 @@ public class CartPage extends BasePage {
     public WebElement textCartIsEmpty;
 
     @FindBy(xpath = "//button[@aria-label='Remove']")
-    public WebElement BtnRemoveProduct;
+    public WebElement BtnDeleteProduct;
 
     @FindBy(xpath = "//a[normalize-space()='Checkout']")
     public WebElement BtnCheckout;
+
+    @FindBy(xpath = "//button[@aria-label='Increment quantity']")
+    public WebElement BtnAddProduct;
+
+    @FindBy(xpath = "//button[@aria-label='Decrement quantity']")
+    public WebElement BtnDecrementProduct;
+
+    @FindBy(xpath = "//div[@aria-label='Quantity']")
+    public WebElement productQuantity;
 
     public void CheckIfCartIsEmpty(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -38,8 +48,23 @@ public class CartPage extends BasePage {
 
     public void RemoveProductFromCart(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.elementToBeClickable(BtnRemoveProduct));
-        BtnRemoveProduct.click();
+        wait.until(ExpectedConditions.elementToBeClickable(BtnDeleteProduct));
+        BtnDeleteProduct.click();
         wait.until(ExpectedConditions.visibilityOf(textCartIsEmpty));
+    }
+
+    public void UpdateProductFromCart(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.elementToBeClickable(BtnAddProduct));
+        wait.until(ExpectedConditions.visibilityOf(productQuantity));
+        Assertions.assertEquals(productQuantity,"1");
+        BtnAddProduct.click();
+        wait.until(ExpectedConditions.visibilityOf(productQuantity));
+        Assertions.assertEquals(productQuantity,"2");
+        BtnDecrementProduct.click();
+        wait.until(ExpectedConditions.visibilityOf(productQuantity));
+        Assertions.assertEquals(productQuantity,"1");
+
+
     }
 }

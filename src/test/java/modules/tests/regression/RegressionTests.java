@@ -6,7 +6,7 @@ import modules.others.RetryExtension;
 import modules.pages.CartPage.CartPage;
 import modules.pages.Commons.HeaderComponent;
 import modules.pages.Commons.Modals;
-import modules.pages.Commons.ProductGridComponent;
+import modules.pages.Commons.ProductResults;
 import modules.pages.FindStorePage.FindStorePage;
 import modules.pages.HomePage.HomePage;
 import modules.pages.ProductPage.ProductPage;
@@ -36,6 +36,16 @@ public class RegressionTests {
         RetryExtension.setMaxRetries(0);
     }
 
+    /**
+     * Author: Caio Rocha Caldas
+     * GitHub: https://github.com/CaioRochaCaldas/nike-selenium-automation
+     * LinkedIn: https://www.linkedin.com/in/caio-rocha-caldas-49970b1b2/?locale=en_US
+     * Version: 1.0
+     * Description: This regression test suite ensures the core functionalities of the e-commerce website remain stable and work as expected after updates or changes.
+     * It covers essential user flows such as adding, updating, and removing products in the cart, searching and filtering products, and finding stores by address.
+     * Each test validates critical functionality to prevent regressions in the shopping experience.
+     */
+
     @Test
     @Description("""
     Given the user opens the browser and accesses the website
@@ -55,11 +65,39 @@ public class RegressionTests {
         new HomePage(driver).AcessHomepage();
         new Modals(driver).AcceptCurrentLocation();
         new HeaderComponent(driver).SearchProduct(productName);
-        new ProductGridComponent(driver).SelectShoes();
+        new ProductResults(driver).SelectShoes();
         new ProductPage(driver).AddShoesToCart();
         new Modals(driver).AddedToCartWithSuccess();
         new HeaderComponent(driver).CartMenu();
         new CartPage(driver).CheckIfCartIsEmpty();
+    }
+
+    @Test
+    @Description("""
+    Given the user opens the browser and accesses the website
+    When the user searches for a product
+    And selects a product from the grid listing
+    And chooses a shoe model and size
+    And adds the product to the cart
+    And navigates to the cart page
+    And clicks on updating the product quantity
+    Then the system should update the product quantity in the cart
+    """)
+    @DisplayName("User can add a product to the shopping cart and update the product quantity")
+    public void AddProductToCartAndUpdateQuantityTest() throws InterruptedException , IOException{
+
+        String productName = "jordan";
+
+        driver = DriverFactory.getDriverDev("chrome");
+        new HomePage(driver).AcessHomepage();
+        new Modals(driver).AcceptCurrentLocation();
+        new HeaderComponent(driver).SearchProduct(productName);
+        new ProductResults(driver).SelectShoes();
+        new ProductPage(driver).AddShoesToCart();
+        new Modals(driver).AddedToCartWithSuccess();
+        new HeaderComponent(driver).CartMenu();
+        new CartPage(driver).CheckIfCartIsEmpty();
+        new CartPage(driver).UpdateProductFromCart();
     }
 
     @Test
@@ -81,7 +119,7 @@ public class RegressionTests {
         new HomePage(driver).AcessHomepage();
         new Modals(driver).AcceptCurrentLocation();
         new HeaderComponent(driver).SearchProduct(productName);
-        new ProductGridComponent(driver).SelectShoes();
+        new ProductResults(driver).SelectShoes();
         new ProductPage(driver).AddShoesToCart();
         new Modals(driver).AddedToCartWithSuccess();
         new HeaderComponent(driver).CartMenu();
@@ -102,8 +140,7 @@ public class RegressionTests {
         driver = DriverFactory.getDriverDev("edge");
         new HomePage(driver).AcessHomepage();
         new HeaderComponent(driver).SearchProduct(productName);
-        new ProductGridComponent(driver).filterSearch();
-        Thread.sleep(50000);
+        new ProductResults(driver).filterSearch();
     }
 
     @Test

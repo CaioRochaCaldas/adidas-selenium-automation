@@ -2,9 +2,13 @@ evidences
 evidences/
 files
 files/
-src/test/java/modules/drivers/chrome/
-src/test/java/modules/drivers/edge/
-src/test/java/modules/drivers/gecko/
+/src/test/java/modules/drivers/chrome/*
+/src/test/java/modules/drivers/edge/*
+/src/test/java/modules/drivers/gecko/*
+
+!/src/test/java/modules/drivers/chrome/
+!/src/test/java/modules/drivers/edge/
+!/src/test/java/modules/drivers/gecko/
 # -----------------------
 # Build e arquivos compilados
 # -----------------------

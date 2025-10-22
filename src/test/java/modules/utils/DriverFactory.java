@@ -18,18 +18,34 @@ public class DriverFactory extends BasePage {
 
         switch (browser.toLowerCase()) {
             case "chrome":
-                System.setProperty("webdriver.edge.driver","C:\\Users\\caior\\OneDrive\\Documentos\\Projetos\\Selenium-web\\adidas-selenium-automation\\src\\test\\java\\modules\\drivers\\chrome\\142.0.7432.0\\msedgedriver.exe");
-                //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\java\\modules\\drivers\\chrome\\chromedriver.exe");
-                driver = new ChromeDriver();
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\java\\modules\\drivers\\chrome\\141.0.7390.122\\chromedriver.exe");
+                ChromeOptions chromeOptions = new ChromeOptions();
+
+                chromeOptions.setExperimentalOption("useAutomationExtension", false);
+                chromeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+                chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
+
+                chromeOptions.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
+                        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
+
+                chromeOptions.addArguments("--disable-notifications");
+                chromeOptions.addArguments("--disable-infobars");
+                chromeOptions.addArguments("--disable-extensions");
+                chromeOptions.addArguments("--no-sandbox");
+                chromeOptions.addArguments("--disable-dev-shm-usage");
+                chromeOptions.addArguments("--start-maximized");
+
+                driver = new ChromeDriver(chromeOptions);
+
+                ((JavascriptExecutor) driver).executeScript(
+                        "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+                );
+
                 driver.manage().window().maximize();
+
                 break;
 
             case "firefox":
-                /*System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\src\\test\\java\\modules\\drivers\\gecko\\0.36.0\\geckodriver.exe");
-                driver = new FirefoxDriver();
-                driver.manage().window().maximize();
-                */
-
                 System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") + "\\src\\test\\java\\modules\\drivers\\gecko\\0.36.0\\geckodriver.exe");
 
                 FirefoxOptions firefoxOptions = new FirefoxOptions();

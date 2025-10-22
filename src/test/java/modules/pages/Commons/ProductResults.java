@@ -11,19 +11,7 @@ import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ProductGridComponent extends BasePage {
-
-    @FindBy(xpath = "//h1[@class='heading_title__iF1Ox']")
-    public WebElement titleMen;
-
-    @FindBy(xpath = "//h1[@class='heading_title__iF1Ox']")
-    public WebElement titleWoman;
-
-    @FindBy(xpath = "//h1[@class='heading_title__iF1Ox']")
-    public WebElement titleKids;
-
-    @FindBy(xpath = "//span//div[@aria-label='Gender']")
-    public WebElement dropGender;
+public class ProductResults extends BasePage {
 
     @FindBy(xpath = "//span//div[@aria-label='Color']")
     public WebElement dropColor;
@@ -43,33 +31,30 @@ public class ProductGridComponent extends BasePage {
     @FindBy(xpath = "//a[@aria-label='Air Jordan 1 Retro High OG \"Pro Green\"']")
     public WebElement productFromGrid;
 
-    public ProductGridComponent(WebDriver driver) {
+    @FindBy(css = "div:nth-child(3) header:nth-child(1) div:nth-child(1) h1:nth-child(1) span:nth-child(2)")
+    public WebElement textSearchResults;
+
+    public ProductResults(WebDriver driver) {
         super(driver);
     }
 
-    public void MenGrid(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.visibilityOf(titleMen));
-        assertEquals(titleMen.getText(),"Men's Sneakers and Workout Clothes");
-    }
-    public void WomenGrid(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.visibilityOf(titleWoman));
-        assertEquals(titleMen.getText(),"Women's Sneakers and Workout Clothes");
-    }
-    public void KidsGrid(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.visibilityOf(titleKids));
-        assertEquals(titleMen.getText(),"Kids' Shoes and Activewear");
-    }
+
     public void filterSearch() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(dropColor));
         dropColor.click();
         wait.until(ExpectedConditions.visibilityOf(colorBlack));
         colorBlack.click();
-
     }
+
+    public String productSearchResults(String productName) throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(textSearchResults));
+        return textSearchResults.getText();
+    }
+
+
+
     public void SelectShoes() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(productFromGrid));

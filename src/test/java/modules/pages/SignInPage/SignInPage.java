@@ -18,13 +18,17 @@ public class SignInPage extends BasePage {
     @FindBy(xpath = "//h1[normalize-space()='Enter your email to join us or sign in.']")
     private WebElement mainTitle;
 
+    @FindBy(id = "username")
+    private WebElement inputEmail;
+
+
     public String validateSignInPageUIElements(){
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(inputEmail));
         wait.until(ExpectedConditions.visibilityOf(mainTitle));
         return  mainTitle.getText();
 
     }
-
 
 }

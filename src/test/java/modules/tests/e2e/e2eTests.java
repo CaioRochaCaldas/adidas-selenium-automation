@@ -5,7 +5,7 @@ import modules.pages.CartPage.CartPage;
 import modules.pages.CheckoutPage.CheckoutPage;
 import modules.pages.Commons.HeaderComponent;
 import modules.pages.Commons.Modals;
-import modules.pages.Commons.ProductGridComponent;
+import modules.pages.Commons.ProductResults;
 import modules.pages.HomePage.HomePage;
 import modules.pages.ProductPage.ProductPage;
 import modules.utils.DriverFactory;
@@ -33,7 +33,16 @@ public class e2eTests {
     static {
         RetryExtension.setMaxRetries(0);
     }
-    //chrome
+
+    /**
+     * Author: Caio Rocha Caldas
+     * GitHub: https://github.com/CaioRochaCaldas/nike-selenium-automation
+     * LinkedIn: https://www.linkedin.com/in/caio-rocha-caldas-49970b1b2/?locale=en_US
+     * Version: 1.0
+     * Description: This test suite executes full end-to-end scenarios across different browsers to validate the complete functionality and stability of the Nike website.
+     * The tests simulate real user interactions such as navigating through pages, searching for products, adding items to the cart, and verifying checkout flows.
+     */
+
     @Test
     @Description("""
     E2E Scenario:
@@ -46,7 +55,7 @@ public class e2eTests {
     Then the system should display an order confirmation page indicating a successful purchase
     """)
     @DisplayName("E2E: User searches, selects, and purchases a product successfully on Chrome browser")
-    public void AddProductToCartOnChromeTest() throws InterruptedException , IOException{
+    public void E2eOnChromeTest() throws InterruptedException , IOException{
 
         String productName = "jordan";
         String email = "test@gmail.com";
@@ -64,7 +73,7 @@ public class e2eTests {
         new HomePage(driver).AcessHomepage();
         new Modals(driver).AcceptCurrentLocation();
         new HeaderComponent(driver).SearchProduct(productName);
-        new ProductGridComponent(driver).SelectShoes();
+        new ProductResults(driver).SelectShoes();
         new ProductPage(driver).AddShoesToCart();
         new Modals(driver).AddedToCartWithSuccess();
         new HeaderComponent(driver).CartMenu();
@@ -74,7 +83,6 @@ public class e2eTests {
         new Modals(driver).PaymentErrorMessage();
     }
 
-    //firefox
     @Test
     @Description("""
     E2E Scenario:
@@ -87,7 +95,7 @@ public class e2eTests {
     Then the system should display an order confirmation page indicating a successful purchase
     """)
     @DisplayName("E2E: User searches, selects, and purchases a product successfully on Chrome browser")
-    public void AddProductToCartOnFirefoxTest() throws InterruptedException , IOException{
+    public void E2eOnFirefoxTest() throws InterruptedException , IOException{
 
         String productName = "jordan";
         String email = "test@gmail.com";
@@ -105,7 +113,7 @@ public class e2eTests {
         new HomePage(driver).AcessHomepage();
         new Modals(driver).AcceptCurrentLocation();
         new HeaderComponent(driver).SearchProduct(productName);
-        new ProductGridComponent(driver).SelectShoes();
+        new ProductResults(driver).SelectShoes();
         new ProductPage(driver).AddShoesToCart();
         new Modals(driver).AddedToCartWithSuccess();
         new HeaderComponent(driver).CartMenu();
@@ -115,7 +123,6 @@ public class e2eTests {
         new Modals(driver).PaymentErrorMessage();
     }
 
-    //edge
     @Test
     @Description("""
     E2E Scenario:
@@ -128,7 +135,7 @@ public class e2eTests {
     Then the system should display an order confirmation page indicating a successful purchase
     """)
     @DisplayName("E2E: User searches, selects, and purchases a product successfully on Chrome browser")
-    public void AddProductToCartOnEdgeTest() throws InterruptedException , IOException{
+    public void E2eOnEdgeTest() throws InterruptedException , IOException{
 
         String productName = "jordan";
         String email = "test@gmail.com";
@@ -146,7 +153,7 @@ public class e2eTests {
         new HomePage(driver).AcessHomepage();
         new Modals(driver).AcceptCurrentLocation();
         new HeaderComponent(driver).SearchProduct(productName);
-        new ProductGridComponent(driver).SelectShoes();
+        new ProductResults(driver).SelectShoes();
         new ProductPage(driver).AddShoesToCart();
         new Modals(driver).AddedToCartWithSuccess();
         new HeaderComponent(driver).CartMenu();
