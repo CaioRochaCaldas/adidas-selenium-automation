@@ -11,15 +11,14 @@ https://github.com/user-attachments/assets/886fe69b-b9e3-47fd-9ae8-5406678df66b
 
 Here are the full videos showcasing different types of test executions:
 
-- ⚡ **Smoke Tests** — [Watch on YouTube](https://youtu.be/XEeXdHEJ0cA)  
+- ⚡ **Smoke Tests** — [Watch on YouTube]()  
   Quick execution to verify that the main functionalities are working correctly before deeper testing.
 
-- 🧩 **Regression Tests** — [Watch on YouTube](https://youtu.be/egsjiOAfBWE)  
+- 🧩 **Regression Tests** — [Watch on YouTube]()  
   Full validation of core system features to ensure everything works as expected after updates.
 
-- 🚀 **End-to-End (E2E) Tests** — [Watch on YouTube](https://youtu.be/kmDlAZ7fWuU)  
-  Complete flow covering both user and admin interactions.
-
+- 🚀 **End-to-End (E2E) Tests** — [Watch on YouTube]()  
+  Complete user journey across the website.
 ## Tech Stack
 
 <img width="200" height="350" alt="selenium webdriver" src="https://github.com/user-attachments/assets/41df9f5c-44f3-4970-814a-1296536520f1" />
