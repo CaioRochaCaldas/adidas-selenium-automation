@@ -5,7 +5,8 @@ This project automates end-to-end web testing of the Nike online store using Sel
 
 Below is a short preview of an automated test run in action:
 
-https://github.com/user-attachments/assets/886fe69b-b9e3-47fd-9ae8-5406678df66b
+![gif-preview](https://github.com/user-attachments/assets/2b80f5b2-5d4d-4864-86fa-1c1f1fb237a6)
+
 
 ## 🎬 Full Test Execution Demos
 
