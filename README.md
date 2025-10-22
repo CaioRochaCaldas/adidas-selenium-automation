@@ -31,17 +31,25 @@ Here are the full videos showcasing different types of test executions:
 ## Test Cases
 - EndToEnd
 
-- Search Product and Filter by Color
-
-- Search Product By Valid Name
-
-- Search Product With Invalid Name
-
 - Add Product To Cart
+
+- Remove Product From Cart
+
+- Search Product And Apply Filter
+
+- Find Store By Valid Address
+
+- Find Store By Invalid Address
 
 - Update Product Quantity In Cart
 
 - Clear Product From Cart Using Button
+
+- Nike Logo Displayed On Load
+
+- Verify SearchField Is Visible And Functional
+
+- Verify Login Button Opens The Login Page
 
 ## Website Screenshots
 * __Home Page__
