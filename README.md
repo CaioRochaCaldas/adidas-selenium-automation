@@ -7,7 +7,6 @@ Below is a short preview of an automated test run in action:
 
 ![gif-preview](https://github.com/user-attachments/assets/2b80f5b2-5d4d-4864-86fa-1c1f1fb237a6)
 
-
 ## 🎬 Full Test Execution Demos
 
 Here are the full videos showcasing different types of test executions:
