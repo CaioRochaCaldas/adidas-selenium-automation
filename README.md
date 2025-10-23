@@ -11,12 +11,6 @@ Below is a short preview of an automated test run in action:
 
 Here are the full videos showcasing different types of test executions:
 
-- ⚡ **Smoke Tests** — [Watch on YouTube]()  
-  Quick execution to verify that the main functionalities are working correctly before deeper testing.
-
-- 🧩 **Regression Tests** — [Watch on YouTube]()  
-  Full validation of core system features to ensure everything works as expected after updates.
-
 - 🚀 **End-to-End (E2E) Tests** — [Watch on YouTube](https://studio.youtube.com/video/2iqUJ89QuTw/edit)  
   Complete user journey across the website.
 ## Tech Stack
