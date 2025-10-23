@@ -18,7 +18,7 @@ Here are the full videos showcasing different types of test executions:
 - 🧩 **Regression Tests** — [Watch on YouTube]()  
   Full validation of core system features to ensure everything works as expected after updates.
 
-- 🚀 **End-to-End (E2E) Tests** — [Watch on YouTube]()  
+- 🚀 **End-to-End (E2E) Tests** — [Watch on YouTube](https://studio.youtube.com/video/2iqUJ89QuTw/edit)  
   Complete user journey across the website.
 ## Tech Stack
 
